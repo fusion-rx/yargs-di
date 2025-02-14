@@ -1,7 +1,10 @@
 import { Command } from '../di/command.js';
 import { Type } from '../type/type.js';
 
-export interface CommandMetadataFacade extends Command {}
+export interface CommandMetadataFacade extends Command {
+    buildMethod: string;
+    handleMethod: string;
+}
 
 /**
  * Reflects command metadata directly injected with `@Command()`
